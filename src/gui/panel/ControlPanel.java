@@ -37,7 +37,7 @@ public class ControlPanel extends JPanel implements ICommon {
  
     lbNumSquareClosed = new JLabel();
     lbNumSquareClosed.setFont(font);
-    lbNumSquareClosed.setText("Số ô chưa mở: " + Board.NUM_ROWS * Board.NUM_COLUMNS);
+    lbNumSquareClosed.setText("Mines remaining: " + Board.NUM_ROWS * Board.NUM_COLUMNS);
     lbNumSquareClosed.setBounds(10, 10, 250, 40);
     add(lbNumSquareClosed);
  

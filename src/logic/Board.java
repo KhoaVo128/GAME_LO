@@ -6,10 +6,12 @@ public class Board {
   public static final int NUM_ROWS = 15;
   public static final int NUM_COLUMNS = 20;
   public static final int NUM_MINES = NUM_ROWS * NUM_COLUMNS / 5;
+  public int remainingMines;
  
   private Square[][] square;
  
   public Board() {
+    remainingMines=NUM_MINES;
     square = new Square[NUM_ROWS][NUM_COLUMNS];
     for (int i = 0; i < square.length; i++) {
       for (int j = 0; j < square[0].length; j++) {

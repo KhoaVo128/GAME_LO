@@ -17,10 +17,12 @@ public class GUI extends JFrame implements ICommon, ITrans {
   public static final int FRAME_WIDTH = 730;
   public static final int FRAME_HEIGHT = 600;
   private BoardPanel boardPanel;
+
   private ControlPanel controlPanel;
   private Board board;
  
   public GUI() {
+
     board = new Board();
     initComp();
     addComp();
@@ -29,6 +31,7 @@ public class GUI extends JFrame implements ICommon, ITrans {
  
   @Override
   public void initComp() {
+
     setTitle(TITLE);
     setSize(FRAME_WIDTH, FRAME_HEIGHT);
     setLocationRelativeTo(null);
