@@ -19,6 +19,7 @@ public class BoardPanel extends JPanel implements ICommon {
   private Label[][] lbSquare;
   private ITrans listener;
   private int numSquareClosed;
+  private int minesRemaining;
  
   public BoardPanel() {
     initComp();
@@ -60,9 +61,9 @@ public class BoardPanel extends JPanel implements ICommon {
           public void mouseReleased(MouseEvent e) {
             Label label = (Label) e.getComponent();
             if (e.getButton() == MouseEvent.BUTTON1) {
-              listener.play(label.x, label.y);
+              listener.play(label.x, label.y); //
             } else if (e.getButton() == MouseEvent.BUTTON3) {
-              listener.target(label.x, label.y);
+              listener.target(label.x, label.y); //put flag
             }
           }
         });
@@ -78,22 +79,22 @@ public class BoardPanel extends JPanel implements ICommon {
   public void updateBoard() {
     Font font = new Font("VNI", Font.PLAIN, 20);
     numSquareClosed = 0;
+
     Square[][] listSquare = listener.getListSquare();
     for (int i = 0; i < listSquare.length; i++) {
       for (int j = 0; j < listSquare[0].length; j++) {
         lbSquare[i][j].setFont(font);
-        if (!listSquare[i][j].isOpen()) {
-          lbSquare[i][j].setBackground(Color.lightGray);
-
+        if (!listSquare[i][j].isOpen()) { // if not revealed
+          lbSquare[i][j].setBackground(Color.lightGray); // light gray background for cover
           numSquareClosed++;
-          if (!listSquare[i][j].isTarget()) {
+          if (!listSquare[i][j].isTarget()) { //not revealed and hasn't been clicked on
             lbSquare[i][j].setText("");
           } else {
-            lbSquare[i][j].setForeground(Color.RED);
+            lbSquare[i][j].setForeground(Color.RED); // not revealed but right clicked
             lbSquare[i][j].setText("\uD83D\uDEA9"); // ki tu 'flag'
           }
-        } else {
-          if (listSquare[i][j].isHasMine()) {
+        } else { // if revealed
+          if (listSquare[i][j].isHasMine()) { // is a mine
             lbSquare[i][j].setForeground(Color.black);
             lbSquare[i][j].setText("\uD83D\uDCA3"); // ki tu 'bomb'
           } else {

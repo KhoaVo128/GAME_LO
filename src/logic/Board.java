@@ -5,7 +5,7 @@ import java.util.Random;
 public class Board {
   public static final int NUM_ROWS = 15;
   public static final int NUM_COLUMNS = 20;
-  public static final int NUM_MINES = NUM_ROWS * NUM_COLUMNS / 5;
+  public static final int NUM_MINES = NUM_ROWS * NUM_COLUMNS / 8;
   public int remainingMines;
  
   private Square[][] square;
@@ -66,11 +66,11 @@ public class Board {
       if (square[x][y].isHasMine()) {
         return false;
       }
-      if (square[x][y].getNumMineAround() == 0) {
+      if (square[x][y].getNumMineAround() == 0) { //if clicked on a square with surrounding mines =0
         for (int m = -1; m <= 1; m++) {
           if (x + m < 0) { m++; }
           if (x + m > NUM_ROWS - 1) { break; }
-          for (int n = -1; n <= 1; n++) {
+          for (int n = -1; n <= 1; n++) { //expand area until surrounded with squares with surroundind mines!=0
             if (y + n < 0) { n++; }
             if (y + n > NUM_COLUMNS - 1) { break; }
             play(x + m, y + n);
@@ -94,7 +94,8 @@ public class Board {
   public void showAllSquares() {
     for (int i = 0; i < square.length; i++) {
       for (int j = 0; j < square[0].length; j++) {
-        square[i][j].setOpen(true);
+          square[i][j].setOpen(true);
+
       }
     }
   }
