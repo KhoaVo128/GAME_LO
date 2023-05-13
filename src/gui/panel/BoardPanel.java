@@ -39,7 +39,8 @@ public class BoardPanel extends JPanel implements ICommon {
       for (int j = 0; j < lbSquare[0].length; j++) {
         lbSquare[i][j] = new Label();
         lbSquare[i][j].setOpaque(true);
-        lbSquare[i][j].setBackground(new Color(242, 242, 242));
+        //lbSquare[i][j].setBackground(new Color(242, 242, 242));
+        lbSquare[i][j].setBackground(Color.lightGray);
         lbSquare[i][j].setBorder(border);
         lbSquare[i][j].setHorizontalAlignment(JLabel.CENTER);
         lbSquare[i][j].setVerticalAlignment(JLabel.CENTER);
@@ -82,16 +83,18 @@ public class BoardPanel extends JPanel implements ICommon {
       for (int j = 0; j < listSquare[0].length; j++) {
         lbSquare[i][j].setFont(font);
         if (!listSquare[i][j].isOpen()) {
-          lbSquare[i][j].setBackground(new Color(242, 242, 242));
-          lbSquare[i][j].setForeground(Color.black);
+          lbSquare[i][j].setBackground(Color.lightGray);
+
           numSquareClosed++;
           if (!listSquare[i][j].isTarget()) {
             lbSquare[i][j].setText("");
           } else {
+            lbSquare[i][j].setForeground(Color.RED);
             lbSquare[i][j].setText("\uD83D\uDEA9"); // ki tu 'flag'
           }
         } else {
           if (listSquare[i][j].isHasMine()) {
+            lbSquare[i][j].setForeground(Color.black);
             lbSquare[i][j].setText("\uD83D\uDCA3"); // ki tu 'bomb'
           } else {
             int numMineAround = listSquare[i][j].getNumMineAround();
@@ -102,7 +105,8 @@ public class BoardPanel extends JPanel implements ICommon {
               // đặt màu số cho dễ nhìn
               switch (numMineAround) {
               case 1:
-                lbSquare[i][j].setForeground(new Color(128, 128, 128));
+                //lbSquare[i][j].setForeground(new Color(128, 128, 128));
+                lbSquare[i][j].setForeground(Color.blue);
                 break;
               case 2:
                 lbSquare[i][j].setForeground(new Color(255, 0, 0));
@@ -114,7 +118,8 @@ public class BoardPanel extends JPanel implements ICommon {
                 lbSquare[i][j].setForeground(new Color(102, 0, 255));
                 break;
               case 5:
-                lbSquare[i][j].setForeground(new Color(128, 128, 128));
+                //lbSquare[i][j].setForeground(new Color(128, 128, 128));
+                lbSquare[i][j].setForeground(Color.blue);
                 break;
               case 6:
                 lbSquare[i][j].setForeground(new Color(255, 0, 0));
@@ -128,7 +133,7 @@ public class BoardPanel extends JPanel implements ICommon {
               }
             }
           }
-          lbSquare[i][j].setBackground(Color.white);
+          lbSquare[i][j].setBackground(new Color(242, 242, 242));
         }
       }
     }
