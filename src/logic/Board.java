@@ -82,11 +82,11 @@ public class Board {
   }
  
   public void target(int x, int y) {
-    if (!square[x][y].isOpen()) {
-      if (!square[x][y].isTarget()) {
-        square[x][y].setTarget(true);
+    if (!square[x][y].isOpen()) { //not open
+      if (!square[x][y].isTarget()) { // and hasn't put flag
+        square[x][y].setTarget(true); //put flag
       } else {
-        square[x][y].setTarget(false);
+        square[x][y].setTarget(false); //remove flag
       }
     }
   }
