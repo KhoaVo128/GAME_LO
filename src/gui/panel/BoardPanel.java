@@ -65,8 +65,12 @@ public class BoardPanel extends JPanel implements ICommon {
           public void mouseReleased(MouseEvent e) {
             Label label = (Label) e.getComponent();
             if (e.getButton() == MouseEvent.BUTTON1) {
-              listener.saveToStatusStack();
+
+              if(!listener.getListSquare()[label.x][label.y].isOpen()){
+                listener.saveToStatusStack();
+              }
               listener.play(label.x, label.y); //
+
 
 
             } else if (e.getButton() == MouseEvent.BUTTON3) {

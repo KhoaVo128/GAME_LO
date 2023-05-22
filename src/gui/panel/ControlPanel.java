@@ -102,6 +102,9 @@ public class ControlPanel extends JPanel implements ICommon {
     } else if (numSquareClosed == 0) {
       lbNotify.setText("THUA");
       lbNotify.setForeground(Color.red);
+    }else{
+      lbNotify.setText("");
+      lbNotify.setForeground(Color.white);
     }
   }
 
