@@ -3,6 +3,8 @@ package gui;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.util.Date;
+import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
@@ -13,16 +15,17 @@ import logic.Square;
  
 public class GUI extends JFrame implements ICommon, ITrans {
   private static final long serialVersionUID = -5479701518838741039L;
+
+
+
   private static final String TITLE = "MineSweeper";
   public static final int FRAME_WIDTH = 730;
   public static final int FRAME_HEIGHT = 600;
   private BoardPanel boardPanel;
-
   private ControlPanel controlPanel;
   private Board board;
  
   public GUI() {
-
     board = new Board();
     initComp();
     addComp();
@@ -72,20 +75,26 @@ public class GUI extends JFrame implements ICommon, ITrans {
     };
     addWindowListener(wd);
   }
- 
+
+
+
   @Override
   public Square[][] getListSquare() {
     return board.getListSquare();
   }
- 
+
+
   @Override
   public void play(int x, int y) {
+
     boolean check = board.play(x, y);
     if (!check) { board.showAllSquares(); }
     boardPanel.updateBoard();
     // cập nhật số ô chưa mở vào controlPanel
     int numSquareClosed = boardPanel.getNumSquareClosed();
+//    int remainMines  = boardPanel.getRemainMines();
     controlPanel.updateStatus(numSquareClosed);
+
   }
  
   @Override
@@ -99,4 +108,17 @@ public class GUI extends JFrame implements ICommon, ITrans {
     board = new Board();
     boardPanel.updateBoard();
   }
+  @Override
+  public void undo(){
+    board.undo();
+    boardPanel.updateBoard();
+    controlPanel.updateStatus(boardPanel.getNumSquareClosed());
+  }
+
+  @Override
+  public void saveToStatusStack() {
+    board.saveToStatusStack();
+  }
+
+
 }

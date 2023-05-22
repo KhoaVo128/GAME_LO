@@ -5,6 +5,7 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.Stack;
 import javax.swing.JPanel;
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
@@ -13,15 +14,17 @@ import gui.ICommon;
 import gui.ITrans;
 import logic.Board;
 import logic.Square;
+import java.util.Stack;
  
 public class BoardPanel extends JPanel implements ICommon {
   private static final long serialVersionUID = -6403941308246651773L;
   private Label[][] lbSquare;
+  Stack<Label[][]> previousMoves;
   private ITrans listener;
   private int numSquareClosed;
-  private int minesRemaining;
  
   public BoardPanel() {
+    previousMoves =  new Stack<>();
     initComp();
     addComp();
     addEvent();
@@ -52,6 +55,7 @@ public class BoardPanel extends JPanel implements ICommon {
  
   @Override
   public void addEvent() {
+
     for (int i = 0; i < lbSquare.length; i++) {
       for (int j = 0; j < lbSquare[0].length; j++) {
         lbSquare[i][j].x = i;
@@ -61,22 +65,31 @@ public class BoardPanel extends JPanel implements ICommon {
           public void mouseReleased(MouseEvent e) {
             Label label = (Label) e.getComponent();
             if (e.getButton() == MouseEvent.BUTTON1) {
+              listener.saveToStatusStack();
               listener.play(label.x, label.y); //
+
+
             } else if (e.getButton() == MouseEvent.BUTTON3) {
               listener.target(label.x, label.y); //put flag
             }
+
+
           }
         });
       }
     }
   }
- 
+
+
+
+
   public void addListener(ITrans event) {
     listener = event;
   }
  
   // cập nhật hiển thị
   public void updateBoard() {
+    previousMoves.push(lbSquare);
     Font font = new Font("VNI", Font.PLAIN, 20);
     numSquareClosed = 0;
 
@@ -87,7 +100,7 @@ public class BoardPanel extends JPanel implements ICommon {
         if (!listSquare[i][j].isOpen()) { // if not revealed
           lbSquare[i][j].setBackground(Color.lightGray); // light gray background for cover
           numSquareClosed++;
-          if (!listSquare[i][j].isTarget()) { //not revealed and hasn't been clicked on
+          if (!listSquare[i][j].isTarget()) { //not revealed and hasn't been flagged
             lbSquare[i][j].setText("");
           } else {
             lbSquare[i][j].setForeground(Color.RED); // not revealed but right clicked
@@ -152,4 +165,5 @@ public class BoardPanel extends JPanel implements ICommon {
   public int getNumSquareClosed() {
     return numSquareClosed;
   }
+
 }

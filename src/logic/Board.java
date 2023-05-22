@@ -1,23 +1,32 @@
 package logic;
  
 import java.util.Random;
- 
+import java.util.Stack;
+
 public class Board {
   public static final int NUM_ROWS = 15;
   public static final int NUM_COLUMNS = 20;
   public static final int NUM_MINES = NUM_ROWS * NUM_COLUMNS / 8;
   public int remainingMines;
  
-  private Square[][] square;
+  public Square[][] square;
+  public Stack<boolean[][]> undoList ;
+
  
   public Board() {
+    boolean[][] squaresStats ;
+    undoList = new Stack<>();
     remainingMines=NUM_MINES;
     square = new Square[NUM_ROWS][NUM_COLUMNS];
+    squaresStats = new boolean[NUM_ROWS][NUM_COLUMNS];
+
     for (int i = 0; i < square.length; i++) {
       for (int j = 0; j < square[0].length; j++) {
         square[i][j] = new Square();
+        //squaresStats[i][j]=square[i][j].isOpen();
       }
     }
+    //undoList.push(squaresStats);// save opened and unopened status
  
     // đặt mìn vào các ô ngẫu nhiên
     for (int i = 0; i < NUM_MINES; i++) {
@@ -49,6 +58,7 @@ public class Board {
         square[i][j].setNumMineAround(count);
       }
     }
+    //undoList.add(getListSquare());
   }
  
   private int genRan(int range) {
@@ -66,7 +76,7 @@ public class Board {
       if (square[x][y].isHasMine()) {
         return false;
       }
-      if (square[x][y].getNumMineAround() == 0) { //if clicked on a square with surrounding mines =0
+      if (square[x][y].getNumMineAround() == 0 ||(square[x][y].getNumMineAround() == 0 && square[x][y].isTarget())) { //if clicked on a square with surrounding mines =0
         for (int m = -1; m <= 1; m++) {
           if (x + m < 0) { m++; }
           if (x + m > NUM_ROWS - 1) { break; }
@@ -85,18 +95,43 @@ public class Board {
     if (!square[x][y].isOpen()) { //not open
       if (!square[x][y].isTarget()) { // and hasn't put flag
         square[x][y].setTarget(true); //put flag
+          remainingMines--;
       } else {
         square[x][y].setTarget(false); //remove flag
+          //remainingMines++;
       }
     }
   }
- 
+
+  //reveal all
   public void showAllSquares() {
     for (int i = 0; i < square.length; i++) {
       for (int j = 0; j < square[0].length; j++) {
           square[i][j].setOpen(true);
-
       }
     }
   }
+
+  public void undo(){
+    if(!undoList.isEmpty()){
+      for (int i = 0; i < square.length; i++) {
+        for (int j = 0; j < square[0].length; j++) {
+          square[i][j].setOpen(undoList.peek()[i][j]);
+        }
+      }
+      undoList.pop();
+    }
+
+  }
+
+  public void saveToStatusStack(){
+    boolean[][] squaresStats =new boolean[NUM_ROWS][NUM_COLUMNS];
+    for (int i = 0; i < square.length; i++) {
+      for (int j = 0; j < square[0].length; j++) {
+        squaresStats[i][j]=square[i][j].isOpen();
+      }
+    }
+    undoList.push(squaresStats);
+  }
+
 }
