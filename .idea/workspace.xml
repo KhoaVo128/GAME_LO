@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63ddf1f0-04ae-4203-9207-da3fe2887d5a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="66f24d7c-705b-447a-bdb9-e352da2e41ba" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-=======
-      <change beforePath="$PROJECT_DIR$/src/logic/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Board.java" afterDir="false" />
->>>>>>> 0f2a6b9a9ef0cedbadae6aba209f6c1de1eca5ee
+      <change beforePath="$PROJECT_DIR$/Minesweeper" beforeDir="false" afterPath="$PROJECT_DIR$/Minesweeper" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Minesweeper/gui/GUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Minesweeper/gui/ICommon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Minesweeper/gui/ITrans.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Minesweeper/gui/panel/BoardPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Minesweeper/gui/panel/ControlPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Minesweeper/logic/Board.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Minesweeper/logic/Square.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Minesweeper/main/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,33 +22,30 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2Pj7RSgbFCJxDKvKcsBLy0vfk8F" />
+  <component name="ProjectId" id="2PhXbJuS1xJQ5JO7nYvkdilA4sD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\User\Desktop\university\DSA\GAme_Lor\src" />
-    </key>
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Desktop/university/DSA/Minesweeper_DSA&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  }
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.Main" />
@@ -68,32 +69,19 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="63ddf1f0-04ae-4203-9207-da3fe2887d5a" name="Changes" comment="" />
-      <created>1683958853415</created>
+      <changelist id="66f24d7c-705b-447a-bdb9-e352da2e41ba" name="Changes" comment="" />
+      <created>1683910362030</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1683958853415</updated>
-      <workItem from="1683958856682" duration="23541000" />
-      <workItem from="1684162327861" duration="4015000" />
-      <workItem from="1684246583460" duration="8970000" />
-      <workItem from="1684679775048" duration="35000" />
-      <workItem from="1684726617878" duration="19701000" />
-      <workItem from="1684756653785" duration="1710000" />
+      <updated>1683910362030</updated>
+      <workItem from="1683910363281" duration="1000" />
+      <workItem from="1683946938334" duration="803000" />
+      <workItem from="1683958514006" duration="326000" />
+      <workItem from="1684679828958" duration="73000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>
