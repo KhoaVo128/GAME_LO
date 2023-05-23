@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66f24d7c-705b-447a-bdb9-e352da2e41ba" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_22_2023_9_32_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_22_2023_9_32_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_22_2023_9_32_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_22_2023_9_32_PM__Changes_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minesweeper" beforeDir="false" afterPath="$PROJECT_DIR$/Minesweeper" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minesweeper/gui/GUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minesweeper/gui/ICommon.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minesweeper/gui/ITrans.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minesweeper/gui/panel/BoardPanel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minesweeper/gui/panel/ControlPanel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minesweeper/logic/Board.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minesweeper/logic/Square.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minesweeper/main/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,5 +74,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
