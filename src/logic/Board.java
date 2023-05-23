@@ -111,7 +111,7 @@ public class Board {
       }
     }
   }
-
+  // undo for backing the move you just do
   public void undo(){
     if(!undoList.isEmpty()){
       for (int i = 0; i < square.length; i++) {
@@ -123,7 +123,7 @@ public class Board {
     }
 
   }
-
+  // save a move to stack and use undo class to back your step
   public void saveToStatusStack(){
     boolean[][] squaresStats =new boolean[NUM_ROWS][NUM_COLUMNS];
     for (int i = 0; i < square.length; i++) {
