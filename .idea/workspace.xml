@@ -7,7 +7,10 @@
     <list default="true" id="63ddf1f0-04ae-4203-9207-da3fe2887d5a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
       <change beforePath="$PROJECT_DIR$/src/logic/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Board.java" afterDir="false" />
+>>>>>>> 0f2a6b9a9ef0cedbadae6aba209f6c1de1eca5ee
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +77,8 @@
       <workItem from="1684162327861" duration="4015000" />
       <workItem from="1684246583460" duration="8970000" />
       <workItem from="1684679775048" duration="35000" />
-      <workItem from="1684726617878" duration="19455000" />
+      <workItem from="1684726617878" duration="19701000" />
+      <workItem from="1684756653785" duration="1710000" />
     </task>
     <servers />
   </component>
