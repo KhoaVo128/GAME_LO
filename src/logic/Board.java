@@ -7,7 +7,6 @@ public class Board {
   public static final int NUM_ROWS = 15;
   public static final int NUM_COLUMNS = 20;
   public static final int NUM_MINES = NUM_ROWS * NUM_COLUMNS / 8;
-  public int remainingMines;
  
   public Square[][] square;
   public Stack<boolean[][]> undoList ;
@@ -15,7 +14,6 @@ public class Board {
  
   public Board() {
     undoList = new Stack<>();
-    remainingMines=NUM_MINES;
     square = new Square[NUM_ROWS][NUM_COLUMNS];
     for (int i = 0; i < square.length; i++) {
       for (int j = 0; j < square[0].length; j++) {
@@ -92,7 +90,7 @@ public class Board {
     if (!square[x][y].isOpen()) { //not open
       if (!square[x][y].isTarget()) { // and hasn't put flag
         square[x][y].setTarget(true); //put flag
-          remainingMines--;
+          
       } else {
         square[x][y].setTarget(false); //remove flag
           //remainingMines++;
