@@ -2,8 +2,6 @@ package gui;
  
 import logic.Square;
 
-import java.util.List;
-
 public interface ITrans {
   Square[][] getListSquare();
   void play(int x, int y);

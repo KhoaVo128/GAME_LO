@@ -14,12 +14,9 @@ public class Board {
 
  
   public Board() {
-    boolean[][] squaresStats ;
     undoList = new Stack<>();
     remainingMines=NUM_MINES;
     square = new Square[NUM_ROWS][NUM_COLUMNS];
-    squaresStats = new boolean[NUM_ROWS][NUM_COLUMNS];
-
     for (int i = 0; i < square.length; i++) {
       for (int j = 0; j < square[0].length; j++) {
         square[i][j] = new Square();
