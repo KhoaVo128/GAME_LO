@@ -14,7 +14,6 @@ import gui.ICommon;
 import gui.ITrans;
 import logic.Board;
 import logic.Square;
-import java.util.Stack;
  
 public class BoardPanel extends JPanel implements ICommon {
   private static final long serialVersionUID = -6403941308246651773L;
