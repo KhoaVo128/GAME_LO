@@ -15,3 +15,4 @@ We can only highlight the cell with the right mouse button when the cell is in t
 The player wins when the number of unopened cells is equal to the number of mines, loses when the player opens the mines.
 
 Game chart :
+![image](https://github.com/KhoaVo128/GAME_LO/assets/102133781/fe1a9b23-cfbf-4669-97c3-870dd5e1a01e)
