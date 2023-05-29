@@ -5,13 +5,8 @@ public class Square {
   private boolean hasMine;
   private int numMineAround;
   private boolean isTarget;
- 
-  public Square() {
-    isOpen = false;
-    hasMine = false;
-    isTarget = false;
-  }
- 
+
+
   public boolean isOpen() {
     return isOpen;
   }
@@ -36,4 +31,10 @@ public class Square {
   public void setTarget(boolean isTarget) {
     this.isTarget = isTarget;
   }
+  public Square() {
+    isOpen = false;
+    hasMine = false;
+    isTarget = false;
+  }
+
 }
