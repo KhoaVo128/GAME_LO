@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63ddf1f0-04ae-4203-9207-da3fe2887d5a" name="Changes" comment="fix code">
+    <list default="true" id="63ddf1f0-04ae-4203-9207-da3fe2887d5a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/panel/ControlPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/panel/ControlPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Board.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +32,6 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -60,7 +59,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -77,17 +75,7 @@
       <workItem from="1684246583460" duration="8970000" />
       <workItem from="1684679775048" duration="35000" />
       <workItem from="1684726617878" duration="19455000" />
-      <workItem from="1685065944883" duration="27000" />
-      <workItem from="1685323451110" duration="1038000" />
     </task>
-    <task id="LOCAL-00001" summary="fix code">
-      <created>1684769787008</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1684769787008</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,9 +91,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix code" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix code" />
   </component>
 </project>
