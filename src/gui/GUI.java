@@ -24,12 +24,17 @@ public class GUI extends JFrame implements ICommon, ITrans {
   private BoardPanel boardPanel;
   private ControlPanel controlPanel;
   private Board board;
- 
-  public GUI() {
-    board = new Board();
-    initComp();
-    addComp();
-    addEvent();
+
+  public void addComp() {
+    boardPanel = new BoardPanel();
+    boardPanel.setBounds(10, 60, 700, 500);
+    add(boardPanel);
+    boardPanel.addListener(this);
+
+    controlPanel = new ControlPanel();
+    controlPanel.setBounds(10, 0, 700, 60);
+    add(controlPanel);
+    controlPanel.addListener(this);
   }
  
   @Override
@@ -47,19 +52,13 @@ public class GUI extends JFrame implements ICommon, ITrans {
       e.printStackTrace();
     }
   }
- 
-  @Override
-  public void addComp() {
-    boardPanel = new BoardPanel();
-    boardPanel.setBounds(10, 60, 700, 500);
-    add(boardPanel);
-    boardPanel.addListener(this);
- 
-    controlPanel = new ControlPanel();
-    controlPanel.setBounds(10, 0, 700, 60);
-    add(controlPanel);
-    controlPanel.addListener(this);
+  public GUI() {
+    board = new Board();
+    initComp();
+    addComp();
+    addEvent();
   }
+
  
   @Override
   public void addEvent() {
